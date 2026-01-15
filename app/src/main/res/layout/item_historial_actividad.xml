@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="12dp"
+    android:backgroundTint="#FFFFFF"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvHistorialDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha: 24/10/2025 | Hora: 09:13 PM"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#466B95"/>
+
+        <TextView
+            android:id="@+id/tvHistorialActividades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actividades: Caminar (30 min), Correr (15 min)"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvHistorialNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nota General: Texto de la nota"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/btnEditarActividad"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#466B95"
+                android:text="Editar"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnEliminarActividad"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Quitar"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

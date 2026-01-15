@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="12dp"
+    android:backgroundTint="#FFFFFF"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#466B95"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            tools:text="2025-06-23"/>
+
+        <TextView
+            android:id="@+id/tvHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            tools:text="01:00 PM"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del medicamento"
+            android:textStyle="bold"
+            android:textColor="#252A34"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvDosisUnidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50 mg"
+            android:textColor="#252A34"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvFrecuencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cada 8 horas"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Recordatorio"
+                android:textColor="#555555"
+                android:textSize="14sp"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchRecordatorio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:useMaterialThemeColors="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/btnEditar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Editar"
+                android:textColor="#466B95"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnQuitar"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Quitar"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

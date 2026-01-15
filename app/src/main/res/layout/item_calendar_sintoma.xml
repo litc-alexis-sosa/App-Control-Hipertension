@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Hora del registro -->
+        <TextView
+            android:id="@+id/tvSintomaHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#466B95"
+            android:layout_marginBottom="4dp"
+            tools:text="Hora del registro: 08:30 AM" />
+
+        <!-- Síntomas listados -->
+        <TextView
+            android:id="@+id/tvSintomaLista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            tools:text="Síntomas: Mareos, Dolor de cabeza, Otro: Dolor en el cuello" />
+
+        <!-- Nota específica (si existe) -->
+        <TextView
+            android:id="@+id/tvSintomaNota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="13sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#888888"
+            tools:text="Nota: Me desperté con dolor y tuve que tomar una pastilla extra." />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

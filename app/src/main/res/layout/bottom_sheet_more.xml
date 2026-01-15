@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout android:id="@+id/llAnalisis"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <ImageView android:src="@drawable/analysis" android:layout_width="24dp" android:layout_height="24dp"/>
+        <TextView
+            android:text="Análisis"
+            android:textSize="17sp"
+            android:paddingStart="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/llSintomas"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <ImageView android:src="@drawable/sintomas" android:layout_width="24dp" android:layout_height="24dp"/>
+        <TextView android:text="Síntomas"
+            android:textSize="17sp"
+            android:paddingStart="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/llDieta"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <ImageView android:src="@drawable/dieta" android:layout_width="24dp" android:layout_height="24dp"/>
+        <TextView android:text="Dieta"
+            android:textSize="17sp"
+            android:paddingStart="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/llActividadFisica"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <ImageView android:src="@drawable/actividadfisica" android:layout_width="24dp" android:layout_height="24dp"/>
+        <TextView android:text="Actividad Fisica"
+            android:textSize="17sp"
+            android:paddingStart="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

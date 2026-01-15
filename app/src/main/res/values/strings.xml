@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Hipertension ACIF</string>
+
+    <string-array name="unidades_medicina">
+        <item>mg</item>
+        <item>g</item>
+        <item>mcg</item>
+        <item>ml</item>
+        <item>UI</item>
+        <item>gotas</item>
+    </string-array>
+
+    <string-array name="frecuencias_medicina">
+        <item>Cada 2 horas</item>
+        <item>Cada 4 hrs</item>
+        <item>Cada 6 hrs</item>
+        <item>Cada 8 hrs</item>
+        <item>Cada 12 hrs</item>
+        <item>Cada 24 hrs</item>
+    </string-array>
+
+    <!-- Descripciones accesibles de íconos de síntomas -->
+    <string name="sintoma_estoy_bien">Ícono de “estoy bien”</string>
+    <string name="sintoma_mareos">Ícono de mareos</string>
+    <string name="sintoma_dolor_cabeza">Ícono de dolor de cabeza</string>
+    <string name="sintoma_vision_borrosa">Ícono de visión borrosa</string>
+    <string name="sintoma_zumbido">Ícono de zumbido en oídos</string>
+    <string name="sintoma_dolor_pecho">Ícono de dolor en el pecho</string>
+    <string name="sintoma_fatiga">Ícono de fatiga</string>
+    <string name="sintoma_sangrado">Ícono de sangrado nasal</string>
+    <string name="sintoma_dificultad_respirar">Ícono de dificultad para respirar</string>
+    <string name="sintoma_nauseas">Ícono de náuseas</string>
+    <string name="sintoma_vomitos">Ícono de vómitos</string>
+    <string name="sintoma_otro">Ícono de síntoma personalizado</string>
+
+    <string-array name="categorias_comida">
+        <item>Desayuno</item>
+        <item>Comida</item>
+        <item>Cena</item>
+        <item>Colación</item>
+    </string-array>
+
+</resources>

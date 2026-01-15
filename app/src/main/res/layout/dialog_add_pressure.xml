@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Fecha -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Fecha de registro"
+                android:textStyle="bold"
+                android:textColor="#466B95"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/editFecha"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="yyyy-MM-dd"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/transparent"
+                android:textColor="#466B95"
+                android:textSize="16sp"/>
+
+            <!-- Hora -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Hora de registro"
+                android:textStyle="bold"
+                android:textColor="#466B95"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/editHora"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="HH:mm"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/transparent"
+                android:textColor="#466B95"
+                android:textSize="16sp"/>
+
+            <!-- Sistólica -->
+            <EditText
+                android:id="@+id/editSistolica"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Sistólica (mmHg)"
+                android:inputType="number"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Diastólica -->
+            <EditText
+                android:id="@+id/editDiastolica"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Diastólica (mmHg)"
+                android:inputType="number"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Pulso -->
+            <EditText
+                android:id="@+id/editPulso"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Pulso (LPM)"
+                android:inputType="number"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Nota -->
+            <EditText
+                android:id="@+id/editNota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nota (opcional)"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:maxLines="3"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

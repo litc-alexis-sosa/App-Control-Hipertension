@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvTituloDialogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir Chilaquiles"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvInfoCaloriasBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Base: 450 cal / plato"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Cantidad (ej. 1.5)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar en:"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/spinnerCategoria"/>
+
+    <Spinner
+        android:id="@+id/spinnerCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/tvTotalCaloriasCalculadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:text="Total: 0 cal"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

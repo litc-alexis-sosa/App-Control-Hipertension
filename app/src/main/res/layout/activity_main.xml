@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/headerCard"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/profile"
+                        app:civ_border_width="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/headerTextContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp"
+                        app:layout_constraintStart_toEndOf="@id/profileImage"
+                        app:layout_constraintEnd_toStartOf="@id/streakIcon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:id="@+id/headerGreeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¡Hola!"
+                            android:textColor="#466B95"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/headerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="correo@ejemplo.com"
+                            android:textColor="#466B95"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/streakIcon"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/streak"
+                        app:layout_constraintEnd_toStartOf="@id/streakText"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="6dp"/>
+
+                    <TextView
+                        android:id="@+id/streakText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Racha de 5 días"
+                        android:textColor="#466B95"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pressureCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/headerCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvUltimaMedicionTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Última medición"
+                        android:textColor="#466B95"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/labelSistolica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Sistólica"
+                        android:textColor="#466B95"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvUltimaMedicionTitulo" />
+
+                    <TextView
+                        android:id="@+id/labelDiastolica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diastólica"
+                        android:textStyle="bold"
+                        android:textColor="#466B95"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@id/labelSistolica"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelSistolica"
+                        android:layout_marginStart="40dp" />
+
+                    <TextView
+                        android:id="@+id/valueSistolica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120"
+                        android:textColor="#FF346B95"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/labelSistolica"
+                        app:layout_constraintTop_toBottomOf="@id/labelSistolica"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/metricSistolica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mmHg"
+                        android:textColor="#466B95"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@id/valueSistolica"
+                        app:layout_constraintBottom_toBottomOf="@id/valueSistolica"
+                        android:layout_marginStart="4dp"/>
+
+                    <TextView
+                        android:id="@+id/valueDiastolica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="80"
+                        android:textColor="#FF346B95"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/labelDiastolica"
+                        app:layout_constraintTop_toBottomOf="@id/labelDiastolica"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/metricDiastolica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mmHg"
+                        android:textColor="#466B95"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@id/valueDiastolica"
+                        app:layout_constraintBottom_toBottomOf="@id/valueDiastolica"
+                        android:layout_marginStart="4dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/dateRow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/tvUltimaMedicionTitulo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="12dp">
+
+                        <ImageView
+                            android:id="@+id/calendarIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_calendar"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="6dp" />
+
+                        <TextView
+                            android:id="@+id/dateText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2025-06-19"
+                            android:textColor="#466B95"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/timeRow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/dateRow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="0dp">
+
+                        <ImageView
+                            android:id="@+id/timeIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_access_time"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="6dp" />
+
+                        <TextView
+                            android:id="@+id/timeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18:35"
+                            android:textColor="#466B95"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/labelPulso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pulso"
+                        android:textStyle="bold"
+                        android:textColor="#466B95"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/valueSistolica"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/valuePulso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="70"
+                        android:textColor="#FF346B95"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/labelPulso"
+                        app:layout_constraintTop_toBottomOf="@id/labelPulso"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/metricPulso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LPM"
+                        android:textColor="#466B95"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@id/valuePulso"
+                        app:layout_constraintBottom_toBottomOf="@id/valuePulso"
+                        android:layout_marginStart="4dp"/>
+
+                    <TextView
+                        android:id="@+id/noteLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nota:"
+                        android:textColor="#466B95"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/valuePulso"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="12dp"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:id="@+id/displayNote"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sin nota"
+                        android:textColor="#466B95"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@id/noteLabel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="start"
+                        android:layout_marginTop="2dp"/>
+
+                    <Button
+                        android:id="@+id/btnAddValues"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir valores"
+                        android:textAllCaps="false"
+                        android:textColor="#466B95"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/displayNote"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="#e0ecf7"/>
+
+                    <Button
+                        android:id="@+id/btnVerHistorial"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ver historial de mediciones"
+                        android:textAllCaps="false"
+                        android:textColor="#466B95"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btnAddValues"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#e0ecf7"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNextDose"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/pressureCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Próxima Toma"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#466B95"/>
+
+                    <TextView
+                        android:id="@+id/tvProximaDosis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#466B95"
+                        tools:text="Hoy a las 10:00 AM"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tvNombreMedicina"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+                            android:textColor="#252A34"
+                            android:textStyle="bold"
+                            tools:text="Amlodipino"/>
+
+                        <TextView
+                            android:id="@+id/tvDosisDetalle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#466B95"
+                            tools:text="5 mg"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/consejoCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/cardNextDose"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvConsejoTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Consejo del día:"
+                        android:textColor="#466B95"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvConsejoDia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="#252A34"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvConsejoTitulo"
+                        tools:text="Mantén una dieta baja en sodio, ya que el exceso de sal aumenta la retención de líquidos y la presión arterial."/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                app:layout_constraintTop_toBottomOf="@id/consejoCard"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
+        app:itemIconTint="@color/bottom_nav_icon_color"
+        app:itemTextColor="@color/bottom_nav_icon_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

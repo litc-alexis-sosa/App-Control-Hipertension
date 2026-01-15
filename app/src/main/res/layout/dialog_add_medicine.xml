@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Nuevo campo de fecha -->
+    <EditText
+        android:id="@+id/etFechaMed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha (yyyy-MM-dd)"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/etNombreMed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del medicamento" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/etDosisMed"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:hint="Dosis" />
+
+        <Spinner
+            android:id="@+id/spinnerUnidad"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:entries="@array/unidades_medicina"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etHoraMed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hora (ej: 08:00)"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_marginTop="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerFrecuencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:entries="@array/frecuencias_medicina"/>
+
+</LinearLayout>
